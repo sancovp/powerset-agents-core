@@ -1,21 +1,51 @@
 # Powerset Agents Core
 
-Factory for creating self-improving BaseHeavenAgent instances that learn libraries through PayloadDiscovery sequences.
+A factory system for creating specialized HEAVEN framework agents that systematically learn libraries through structured curricula.
 
 ## Overview
 
-Powerset Agents Core provides a standardized way to create HEAVEN framework agents that:
-- Learn libraries through structured PayloadDiscovery learning sequences
-- Track progress using STARLOG MCP for session management
-- Navigate waypoints using Waypoint MCP for guided learning
-- Use NetworkEditTool and BashTool for hands-on exploration
-- Self-improve by creating new learning materials
+Powerset Agents Core provides a standardized factory for creating library learning agents. Each agent is configured with specific learning curricula, equipped with necessary MCPs and tools, and guided by generated system prompts to learn target libraries systematically.
+
+**Key Concept**: Create agents that learn libraries through PayloadDiscovery sequences, track progress in STARLOG sessions, and use hands-on tools to explore and master specific libraries.
+
+## Core Library Features
+
+### 🏭 Factory System
+- **`create_library_powerset_agent()`**: Main factory function for creating learning agents
+- **Configuration Models**: Structured Pydantic models for agent configuration
+- **HEAVEN Integration**: Converts configs to `HeavenAgentConfig` for framework compatibility
+- **Dynamic System Prompts**: Generates contextual prompts based on target library and curriculum
+
+### ⚙️ Agent Configuration
+- **LibraryPowersetAgentConfig**: Core configuration with library path, help command, learning sequence
+- **PayloadDiscoveryConfig**: Curriculum configuration with path/model and usage instructions
+- **BasePowersetAgentConfig**: Base config with MCP servers, tools, session paths, and model settings
+
+### 🔧 MCP Server Setup
+- **STARLOG MCP**: Automatic configuration for session tracking and progress management
+- **Waypoint MCP**: Automatic configuration for curriculum navigation and waypoint traversal
+- **Environment Management**: Proper environment variable handling for MCP server startup
+
+### 🛠️ Tool Integration
+- **NetworkEditTool**: File operations for reading, writing, and editing during learning
+- **BashTool**: Command execution for testing code and exploring library functionality
+- **Tool Resolution**: Maps tool names to actual tool classes automatically
+
+## Specialized Agent Implementations
+
+### 🎯 MetaStack Powerset Agent
+- **Target Library**: `pydantic_stack_core`
+- **Specialization**: Building Pydantic model systems that generate structured string outputs
+- **Use Case**: Creating composable, renderable model architectures
+
+### 📚 PayloadDiscovery Powerset Agent  
+- **Target Library**: `payload_discovery`
+- **Specialization**: Building learning curricula and prompt injection sequences
+- **Use Case**: Creating systematic learning materials for other agents
 
 ## Installation
 
-```bash
-pip install powerset-agents-core
-```
+[Installation instructions pending PyPI publication]
 
 ## Quick Start
 

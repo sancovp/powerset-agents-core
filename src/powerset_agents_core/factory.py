@@ -108,8 +108,7 @@ def _get_default_mcp_servers() -> Dict[str, Dict[str, Any]]:
         "waypoint": {
             "transport": "stdio",
             "command": "python", 
-            "args": ["-m", "payload_discovery.mcp_server_v2"],
-            "env": {"PYTHONPATH": "/home/GOD/pydantic_model_powerset_agent/src"}
+            "args": ["-m", "payload_discovery.mcp_server_v2"]
         }
     }
 
